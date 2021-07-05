@@ -1,0 +1,81 @@
+MultipleTest 2.7
+================
+
+Input file: ../Datasets de prueba/Data-01-II.csv
+  Variable: t
+  Goodness: +
+   Missing: MIN
+
+Summary of input data
+=====================
+
+T1: count=31, missing=0, min=80.0, max=100.0, mean=91.96774193548387, stdev=6.443220347739986
+T2: count=31, missing=0, min=21.0, max=50.0, mean=35.774193548387096, stdev=8.134790587226131
+T3: count=31, missing=0, min=20.0, max=49.0, mean=34.83870967741935, stdev=9.084182545976065
+T4: count=31, missing=0, min=22.0, max=50.0, mean=38.03225806451613, stdev=7.839041543486011
+
+
+Hypothesis to be tested
+=======================
+
+H0: Techniques T1, T2, T3, and T4 behave similarly regarding t
+H1: They do not behave similarly
+
+In the following conclusions, '!=' means that your experimental data
+provides enough evidence to reject H0 and '==' that it does not provide
+enough evidence to reject it.  It is up to you to decide if it accepting
+H0 makes sense or not. Note that not rejecting H0 does not imply that
+it's actually true.  You need make sure that the experiments were run on
+a sufficiently large, but not too large, number of datasets, that they are
+representative datasets, that they were randomly selected, that they are
+independent from each other, and so on.  Above all, you need use your
+natural intelligence to understand the effect size!
+
+Sample ranking
+==============
+
+Tech.	Ranking
+-----	-------
+T1	0.9999999999999993
+T4	2.7258064516129017
+T3	3.1290322580645142
+T2	3.1451612903225787
+
+Iman-Davenport's test
+=====================
+
+-  Statistic: F(3, 90) = 49.48717948717802
+-    P-value: -2.220446049250313E-16
+- Conclusion: != (alpha = 0.05)
+
+Hommel's test (1xN)
+===================
+
+Comparison	z	ap-value	Conclusion (alpha = 0.05)	Actual ap-value
+----------	-	--------	--------------------------	----------------
+T1 - T2	6.541862711944926	1.2648756256836053E-10	!=	-
+T1 - T3	6.492675774261132	1.6865008342448072E-10	!=	-
+T1 - T4	5.26300233216622	1.41721780158158E-7	!=	-
+
+Hommel's ranking (alpha = 0.05)
+-------------------------------
+- Winners: T1
+-  Losers: T4, T3, T2
+
+Bergmann-Hommel's test (NxN)
+============================
+
+Comparison	z	ap-value	Conclusion (alpha = 0.05)	Actual ap-value
+----------	-	--------	--------------------------	----------------
+T1 - T2	6.541862711944926	3.6454360039619064E-10	!=	-
+T1 - T3	6.492675774261132	3.6454360039619064E-10	!=	-
+T1 - T4	5.26300233216622	2.83443560316316E-7	!=	-
+T2 - T4	1.2788603797787073	0.6028386805929227	==	-
+T3 - T4	1.2296734420949107	0.6028386805929227	==	-
+T2 - T3	0.04918693768379643	0.9607703208853594	==	-
+
+Bergmann-Hommel's ranking (alpha = 0.05)
+----------------------------------------
+-  #1: T1
+-  #2: T4, T3, T2
+
